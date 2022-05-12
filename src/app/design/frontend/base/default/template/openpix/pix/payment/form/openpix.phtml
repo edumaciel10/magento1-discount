@@ -1,0 +1,15 @@
+<?php
+if ($this->getMethod()->getInformation()): ?>
+    <ul class="form-list" id="payment_form_<?php echo $this->getMethodCode(); ?>" style="display:block;">
+        <li>
+            <div>
+                <p><?php echo $this->getMethod()->getMethodName(); ?></p>
+            </div>
+            <div class="input-box">
+                <?php if ($this->getMethod()->getInformation()): ?>
+                    <label style="color:#c00"><?php echo $this->getMethod()->getInformation(); ?></label>
+                <?php endif; ?>
+            </div>
+        </li>
+    </ul>
+<?php endif; ?>

@@ -1,0 +1,3 @@
+2022-05-04T03:29:34+00:00 ERR (3): Notice: Array to string conversion  in /var/www/html/app/code/community/OpenPix/Pix/Trait/LogMessenger.php on line 31
+2022-05-11T14:30:07+00:00 ERR (3): Deprecated functionality: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead  in /var/www/html/app/code/core/Mage/Core/Model/Resource/Abstract.php on line 127
+2022-05-11T14:30:07+00:00 ERR (3): Deprecated functionality: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead  in /var/www/html/app/code/core/Mage/Core/Model/Resource/Abstract.php on line 127

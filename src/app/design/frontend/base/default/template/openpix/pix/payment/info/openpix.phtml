@@ -1,0 +1,108 @@
+<p><?php echo $this->getMethod()->getTitle(); ?></p><br>
+
+<?php if (
+    $this->getInfo()->getOrder() &&
+    $this->getInfo()
+        ->getOrder()
+        ->getState() != "pending"
+) {
+    $payment = $this->getInfo()
+        ->getOrder()
+        ->getPayment();
+
+    $additionalInformation = $payment->getAdditionalInformation();
+
+    $qrCodeImage = $additionalInformation["openpix_qrcodeimage"];
+    $brCode = $additionalInformation["openpix_brcode"];
+
+    $this->log(
+        "Payment Method Block - OpenPix Info - additionalInformation " .
+            json_encode($additionalInformation)
+    );
+    $this->log(
+        "Payment Method Block - OpenPix Info - qrCodeImage " . $qrCodeImage
+    );
+    $this->log("Payment Method Block - OpenPix Info - brCode " . $brCode);
+
+    if (
+        $payment->getMethod() === "openpix_pix" &&
+        isset($qrCodeImage) &&
+        isset($brCode)
+    ) { ?>
+        <style>
+            .flex-column-center {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .openpix-copy-button {
+                border: unset;
+                display: inline-block;
+                padding: 0.25em 0.4em;
+                font-size: 75%;
+                font-weight: 700;
+                line-height: 1;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: 0.25rem;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                color: #fff;
+                background-color: #17a2b8;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
+            .openpix-textarea-container {
+                background-color: #e2e3e5;
+                border: 1px solid #dee2e6 !important;
+                padding: 0.75rem 1.25rem;
+                margin-bottom: 1rem;
+                border-radius: 0.25rem;
+            }
+
+            .openpix-copy-textarea {
+                color: #333;
+                width: 100%;
+                background: 0 0;
+                border: none;
+                overflow: hidden;
+                pointer-events: none;
+            }
+        </style>
+        <div class="flex-column-center">
+            <img
+                    class="openpix-qrcode-image"
+                    title="QRCode Pix deste pedido."
+                    src="<?php echo $qrCodeImage; ?>"
+                    width="200px"
+            />
+            <div class="flex-column-center">
+                <button id="btnCopyEmv" class="openpix-copy-button" onclick="copyEmv()">Copiar</button>
+                <div class="openpix-textarea-container">
+                    <textarea id="emv" readonly="" rows="3" class="openpix-copy-textarea"><?php echo $brCode; ?></textarea>
+                </div>
+            </div>
+        </div>
+        <script>
+            function copyEmv() {
+                const textAreaEmv = document.querySelector('#emv');
+
+                textAreaEmv.select();
+                textAreaEmv.setSelectionRange(0, 99999);
+                document.execCommand('copy');
+
+                const originalText = btnCopyEmv.innerHTML;
+                btnCopyEmv.innerHTML = 'Copiado!';
+
+                setTimeout(function () {
+                    btnCopyEmv.innerHTML = originalText;
+                }, 10 * 1000);
+            }
+        </script>
+        <?php }
+}
+?>

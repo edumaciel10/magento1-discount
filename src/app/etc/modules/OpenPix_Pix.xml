@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <OpenPix_Pix>
+            <active>true</active>
+            <codePool>community</codePool>
+
+            <depends>
+                <Mage_Payment />
+            </depends>
+        </OpenPix_Pix>
+    </modules>
+</config>
