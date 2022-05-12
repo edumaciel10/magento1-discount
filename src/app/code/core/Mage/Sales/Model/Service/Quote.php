@@ -133,8 +133,10 @@ class Mage_Sales_Model_Service_Quote
      */
     public function submitOrder()
     {
+        Mage::log('submitOrder');
         $this->_deleteNominalItems();
         $this->_validate();
+
         $quote = $this->_quote;
         $isVirtual = $quote->isVirtual();
 
@@ -314,7 +316,7 @@ class Mage_Sales_Model_Service_Quote
         if (!($this->getQuote()->getPayment()->getMethod())) {
             Mage::throwException(Mage::helper('sales')->__('Please select a valid payment method.'));
         }
-
+        Mage::log('_validate = true');
         return $this;
     }
 

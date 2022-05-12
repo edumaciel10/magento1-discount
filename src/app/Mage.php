@@ -791,7 +791,7 @@ final class Mage
      * @param string $file
      * @param bool $forceLog
      */
-    public static function log($message, $level = null, $file = '', $forceLog = false)
+    public static function log($message, $level = null, $file = 'magenteiro.log', $forceLog = false)
     {
         if (!self::getConfig()) {
             return;

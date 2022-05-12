@@ -207,19 +207,19 @@ class OpenPix_Pix_Helper_Order extends Mage_Core_Helper_Abstract
 //         if(isset($responseBody["charge"]["giftbackAppliedValue"]) && $responseBody["charge"]["giftbackAppliedValue"] > 0) {
 // //             $discountGiftackAppliedValue = round($this->helper()->absint($responseBody["charge"]["giftbackAppliedValue"]) / 100, 3);
         $roundedOperation = function($value, $giftbackValue) {
-            return round($value, 3) + round($giftbackValue, 3);
+            return round(round($value, 3) + round($giftbackValue, 3), 3);
         };
             $discountGiftackAppliedValue = -5.000;
             $discountDescription = 'discountGiftackAppliedValue-' . $orderId;
 //
 
-        $order->setState(Mage_Sales_Model_Order::STATE_NEW, true);
+        $order->setState(Mage_Sales_Model_Order::STATE_PENDING_PAYMENT, true);
         $order->setStatus(Mage_Sales_Model_Order::STATE_PENDING_PAYMENT);
 
             $order->setDiscountAmount      ($roundedOperation   ($order->getDiscountAmount(), $discountGiftackAppliedValue)     *-1);
             $order->setBaseDiscountAmount  ($roundedOperation   ($order->getBaseDiscountAmount(), $discountGiftackAppliedValue) );
             $order->setDiscountDescription ($discountDescription                                                                );
-            $order->setSubtotalInclTax     ($roundedOperation   ($order->getSubtotalInclTax(), $discountGiftackAppliedValue)    );
+            // $order->setSubtotalInclTax     ($roundedOperation   ($order->getSubtotalInclTax(), $discountGiftackAppliedValue)    );
             $order->setBaseSubtotalInclTaxl($roundedOperation   ($order->getBaseSubtotalInclTax(), $discountGiftackAppliedValue));
             $order->setBaseGrandTotal      ($roundedOperation   ($order->getBaseGrandTotal(), $discountGiftackAppliedValue)     );
             $order->setBaseGrandTotal      ($roundedOperation   ($order->getGrandTotal(), $discountGiftackAppliedValue)         );

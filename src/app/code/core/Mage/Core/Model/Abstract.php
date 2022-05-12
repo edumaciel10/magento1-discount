@@ -306,11 +306,14 @@ abstract class Mage_Core_Model_Abstract extends Varien_Object
          * Direct deleted items to delete method
          */
         Mage::log('saving ' . $this->getResourceName(),null,'magenteiro.log',true);
+        Mage::log(Mage::helper('adminhtml')->getUrl(),null,'magenteiro.log',true);
 
         if ($this->isDeleted()) {
+            Mage::log('deleted ' . $this->getResourceName(),null,'magenteiro.log',true);
             return $this->delete();
         }
         if (!$this->_hasModelChanged()) {
+            Mage::log('_hasModelChanged ' . $this->getResourceName(),null,'magenteiro.log',true);
             return $this;
         }
         $this->_getResource()->beginTransaction();
@@ -318,13 +321,14 @@ abstract class Mage_Core_Model_Abstract extends Varien_Object
         try {
 
             $this->_beforeSave();
-            Mage::log("_dataSaveAllowed : $this->_dataSaveAllowed | this->getResourceName() {$this->getResourceName()}" ,null,'magenteiro.log',true);
+            Mage::log("saveAllowed {$this->getResourceName()}" ,null,'magenteiro.log',true);
             if ($this->_dataSaveAllowed) {
                 $this->_getResource()->save($this);
                 $this->_afterSave();
             }
             $this->_getResource()->addCommitCallback(array($this, 'afterCommitCallback'))
                 ->commit();
+            Mage::log("commited data : $this->_dataSaveAllowed | this->getResourceName() {$this->getResourceName()}" ,null,'magenteiro.log',true);
             $this->_hasDataChanges = false;
             $dataCommited = true;
         } catch (Exception $e) {
