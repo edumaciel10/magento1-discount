@@ -201,28 +201,29 @@ class OpenPix_Pix_Helper_Order extends Mage_Core_Helper_Abstract
         $order->setOpenpixBrcode($responseBody["charge"]["brCode"]);
 
         $this->debugJson("OpenPix - giftbackAppliedValue ", $responseBody["charge"]["giftbackAppliedValue"]);
+        Mage::log("-------------------Openpix Forced giftback-------------------". Mage::debug_string_backtrace(),null,'magenteiro.log',true);
+        Mage::log("status: ". $order->getStatus() ," state: " . $order->getState(),null,'magenteiro.log',true);
 
 //         if(isset($responseBody["charge"]["giftbackAppliedValue"]) && $responseBody["charge"]["giftbackAppliedValue"] > 0) {
 // //             $discountGiftackAppliedValue = round($this->helper()->absint($responseBody["charge"]["giftbackAppliedValue"]) / 100, 3);
-        
-            $discountGiftackAppliedValue = -5.00;
+        $roundedOperation = function($value, $giftbackValue) {
+            return round($value, 3) + round($giftbackValue, 3);
+        };
+            $discountGiftackAppliedValue = -5.000;
             $discountDescription = 'discountGiftackAppliedValue-' . $orderId;
 //
-            $baseGrandTotalRound = round($order->getBaseGrandTotal(), 2);
-            $grandTotalRound = round($order->getGrandTotal(), 2);
-//
-            $order->setDiscountAmount($order->getDiscountAmount() + $discountGiftackAppliedValue);
-            $order->setBaseDiscountAmount($order->getBaseDiscountAmount() + $discountGiftackAppliedValue);
-            $order->setDiscountDescription($discountDescription);
-//
-//             $this->log("OpenPix - totals before subtract discount ");
-//             $this->log("OpenPix - baseGrandTotalRound " . $baseGrandTotalRound);
-//             $this->log("OpenPix - grandTotalRound " . $baseGrandTotalRound);
-//             $this->log("OpenPix - baseGrandTotalRound - discount " . ($baseGrandTotalRound - $discountGiftackAppliedValue));
-//             $this->log("OpenPix - grandTotalRound - discount " . ($grandTotalRound - $discountGiftackAppliedValue));
-//
-            $order->setBaseGrandTotal($baseGrandTotalRound - $discountGiftackAppliedValue);
-            $order->setGrandTotal($grandTotalRound - $discountGiftackAppliedValue);
+
+        $order->setState(Mage_Sales_Model_Order::STATE_NEW, true);
+        $order->setStatus(Mage_Sales_Model_Order::STATE_PENDING_PAYMENT);
+
+            $order->setDiscountAmount      ($roundedOperation   ($order->getDiscountAmount(), $discountGiftackAppliedValue)     *-1);
+            $order->setBaseDiscountAmount  ($roundedOperation   ($order->getBaseDiscountAmount(), $discountGiftackAppliedValue) );
+            $order->setDiscountDescription ($discountDescription                                                                );
+            $order->setSubtotalInclTax     ($roundedOperation   ($order->getSubtotalInclTax(), $discountGiftackAppliedValue)    );
+            $order->setBaseSubtotalInclTaxl($roundedOperation   ($order->getBaseSubtotalInclTax(), $discountGiftackAppliedValue));
+            $order->setBaseGrandTotal      ($roundedOperation   ($order->getBaseGrandTotal(), $discountGiftackAppliedValue)     );
+            $order->setBaseGrandTotal      ($roundedOperation   ($order->getGrandTotal(), $discountGiftackAppliedValue)         );
+            
 //
 //             $this->log("OpenPix - order after set discounts ");
 //             $this->log("OpenPix - DiscountDescription " . $order->getDiscountDescription());
@@ -232,11 +233,11 @@ class OpenPix_Pix_Helper_Order extends Mage_Core_Helper_Abstract
 //             $this->log("OpenPix - getGrandTotal" . $order->getGrandTotal());
 //         }
         // Mage::$openpixMage = true;
-        Mage::log("-------------------Openpix Forced giftback-------------------". Mage::debug_string_backtrace(),null,'magenteiro.log',true);
-        Mage::log("-------------------Openpix Forced giftback-------------------",null,'magenteiro.log',true);
-        Mage::log($order->getData(),null,'magenteiro.log',true);
+        Mage::log(json_encode($order->getData()),null,'magenteiro.log',true);
         Mage::log("-------------------Openpix Forced giftback-------------------". Mage::debug_string_backtrace(),null,'../debug/pdo_mysql.log',true);
         $order->save();
+
+        Mage::log("status: {$order->getStatus()} state: {$order->getState()}",null,'magenteiro.log',true);
 
         $payment->setAdditionalInformation(
             "openpix_correlationid",

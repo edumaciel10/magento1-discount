@@ -757,3 +757,230 @@ null
 2022-05-12T13:16:14+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"be9e4448-abb5-4098-aa41-6b95ddbd0c03","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/086d69e3-5d55-406a-811c-c7e4ac748d51","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/086d69e3-5d55-406a-811c-c7e4ac748d51.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=9bbb294dc84e48e4ac032b4c69e9beba520400005303986540575.005802BR5912Your_Company6009Sao_Paulo622905259bbb294dc84e48e4ac032b4c66304ECC1"}
 2022-05-12T13:16:14+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/086d69e3-5d55-406a-811c-c7e4ac748d51.png
 2022-05-12T13:16:14+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=9bbb294dc84e48e4ac032b4c69e9beba520400005303986540575.005802BR5912Your_Company6009Sao_Paulo622905259bbb294dc84e48e4ac032b4c66304ECC1
+2022-05-12T13:39:06+00:00 DEBUG (7): debug
+{
+    "store_id": null,
+    "customer_payment_id": null,
+    "method": "openpix_pix",
+    "additional_data": null,
+    "additional_information": [],
+    "po_number": null,
+    "cc_type": null,
+    "cc_number_enc": null,
+    "cc_last4": null,
+    "cc_owner": null,
+    "cc_exp_month": 0,
+    "cc_exp_year": 0,
+    "cc_number": null,
+    "cc_cid": null,
+    "cc_ss_issue": null,
+    "cc_ss_start_month": 0,
+    "cc_ss_start_year": 0,
+    "parent_id": 35,
+    "method_instance": {},
+    "created_at": "2022-05-12 13:39:06",
+    "updated_at": "2022-05-12 13:39:06",
+    "entity_id": 35,
+    "amount_ordered": 75,
+    "base_amount_ordered": 75,
+    "shipping_amount": 5,
+    "base_shipping_amount": 5
+}
+2022-05-12T13:39:06+00:00 DEBUG (7): OpenPix New Oder - Order Start 
+2022-05-12T13:39:06+00:00 DEBUG (7): OpenPix New Oder - API Payload {"correlationID":"4ea75806-c1c2-4be2-9b62-a37891782e9d","value":7500,"comment":"Default Store View#100000025","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000025"}]}
+2022-05-12T13:39:07+00:00 DEBUG (7): OpenPix New Oder - API Response{"correlationID":"4ea75806-c1c2-4be2-9b62-a37891782e9d","value":7500,"comment":"Default Store View#100000025","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000025"}]}
+null
+2022-05-12T13:39:07+00:00 DEBUG (7): OpenPix - giftbackAppliedValue 
+0
+2022-05-12T13:39:07+00:00 DEBUG (7): OpenPix - Response Charge {"success":true,"additional":{"openpix_correlationid":"4ea75806-c1c2-4be2-9b62-a37891782e9d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=c3f335b35aa048c3b2492f75427f1900520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525c3f335b35aa048c3b2492f7546304CC11"}}
+null
+2022-05-12T13:39:07+00:00 DEBUG (7): OpenPix - Response Charge as Additional Information {"openpix_correlationid":"4ea75806-c1c2-4be2-9b62-a37891782e9d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=c3f335b35aa048c3b2492f75427f1900520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525c3f335b35aa048c3b2492f7546304CC11"}
+null
+2022-05-12T13:39:07+00:00 DEBUG (7): OpenPix - Order End 
+2022-05-12T13:39:07+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"4ea75806-c1c2-4be2-9b62-a37891782e9d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=c3f335b35aa048c3b2492f75427f1900520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525c3f335b35aa048c3b2492f7546304CC11"}
+2022-05-12T13:39:07+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb.png
+2022-05-12T13:39:07+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=c3f335b35aa048c3b2492f75427f1900520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525c3f335b35aa048c3b2492f7546304CC11
+2022-05-12T13:39:34+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"4ea75806-c1c2-4be2-9b62-a37891782e9d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=c3f335b35aa048c3b2492f75427f1900520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525c3f335b35aa048c3b2492f7546304CC11"}
+2022-05-12T13:39:34+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/74bb30c3-9e67-4070-8cf4-bdd13f6b1eeb.png
+2022-05-12T13:39:34+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=c3f335b35aa048c3b2492f75427f1900520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525c3f335b35aa048c3b2492f7546304CC11
+2022-05-12T14:11:10+00:00 DEBUG (7): debug
+{
+    "store_id": null,
+    "customer_payment_id": null,
+    "method": "openpix_pix",
+    "additional_data": null,
+    "additional_information": [],
+    "po_number": null,
+    "cc_type": null,
+    "cc_number_enc": null,
+    "cc_last4": null,
+    "cc_owner": null,
+    "cc_exp_month": 0,
+    "cc_exp_year": 0,
+    "cc_number": null,
+    "cc_cid": null,
+    "cc_ss_issue": null,
+    "cc_ss_start_month": 0,
+    "cc_ss_start_year": 0,
+    "parent_id": 36,
+    "method_instance": {},
+    "created_at": "2022-05-12 14:11:10",
+    "updated_at": "2022-05-12 14:11:10",
+    "entity_id": 36,
+    "amount_ordered": 75,
+    "base_amount_ordered": 75,
+    "shipping_amount": 5,
+    "base_shipping_amount": 5
+}
+2022-05-12T14:11:10+00:00 DEBUG (7): OpenPix New Oder - Order Start 
+2022-05-12T14:11:10+00:00 DEBUG (7): OpenPix New Oder - API Payload {"correlationID":"d7362137-f06e-4ffb-9ef6-f2ce262ecc7d","value":7500,"comment":"Default Store View#100000026","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000026"}]}
+2022-05-12T14:11:10+00:00 DEBUG (7): OpenPix New Oder - API Response{"correlationID":"d7362137-f06e-4ffb-9ef6-f2ce262ecc7d","value":7500,"comment":"Default Store View#100000026","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000026"}]}
+null
+2022-05-12T14:11:10+00:00 DEBUG (7): OpenPix - giftbackAppliedValue 
+0
+2022-05-12T14:11:10+00:00 DEBUG (7): OpenPix - Response Charge {"success":true,"additional":{"openpix_correlationid":"d7362137-f06e-4ffb-9ef6-f2ce262ecc7d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=bc0adbfd9b0c409c9231770168489eae520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525bc0adbfd9b0c409c9231770166304720D"}}
+null
+2022-05-12T14:11:10+00:00 DEBUG (7): OpenPix - Response Charge as Additional Information {"openpix_correlationid":"d7362137-f06e-4ffb-9ef6-f2ce262ecc7d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=bc0adbfd9b0c409c9231770168489eae520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525bc0adbfd9b0c409c9231770166304720D"}
+null
+2022-05-12T14:11:10+00:00 DEBUG (7): OpenPix - Order End 
+2022-05-12T14:11:10+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"d7362137-f06e-4ffb-9ef6-f2ce262ecc7d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=bc0adbfd9b0c409c9231770168489eae520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525bc0adbfd9b0c409c9231770166304720D"}
+2022-05-12T14:11:10+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2.png
+2022-05-12T14:11:10+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=bc0adbfd9b0c409c9231770168489eae520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525bc0adbfd9b0c409c9231770166304720D
+2022-05-12T14:11:17+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"d7362137-f06e-4ffb-9ef6-f2ce262ecc7d","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=bc0adbfd9b0c409c9231770168489eae520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525bc0adbfd9b0c409c9231770166304720D"}
+2022-05-12T14:11:17+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/6c6b68c9-b1fc-4aaf-b2a2-2aa03565bac2.png
+2022-05-12T14:11:17+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=bc0adbfd9b0c409c9231770168489eae520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525bc0adbfd9b0c409c9231770166304720D
+2022-05-12T14:16:12+00:00 DEBUG (7): debug
+{
+    "store_id": null,
+    "customer_payment_id": null,
+    "method": "openpix_pix",
+    "additional_data": null,
+    "additional_information": [],
+    "po_number": null,
+    "cc_type": null,
+    "cc_number_enc": null,
+    "cc_last4": null,
+    "cc_owner": null,
+    "cc_exp_month": 0,
+    "cc_exp_year": 0,
+    "cc_number": null,
+    "cc_cid": null,
+    "cc_ss_issue": null,
+    "cc_ss_start_month": 0,
+    "cc_ss_start_year": 0,
+    "parent_id": 37,
+    "method_instance": {},
+    "created_at": "2022-05-12 14:16:12",
+    "updated_at": "2022-05-12 14:16:12",
+    "entity_id": 37,
+    "amount_ordered": 150,
+    "base_amount_ordered": 150,
+    "shipping_amount": 10,
+    "base_shipping_amount": 10
+}
+2022-05-12T14:16:12+00:00 DEBUG (7): OpenPix New Oder - Order Start 
+2022-05-12T14:16:12+00:00 DEBUG (7): OpenPix New Oder - API Payload {"correlationID":"b7dae5f8-cbd5-4d0a-abcb-7bbb57fbb807","value":15000,"comment":"Default Store View#100000027","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000027"}]}
+2022-05-12T14:16:13+00:00 DEBUG (7): OpenPix New Oder - API Response{"correlationID":"b7dae5f8-cbd5-4d0a-abcb-7bbb57fbb807","value":15000,"comment":"Default Store View#100000027","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000027"}]}
+null
+2022-05-12T14:16:13+00:00 DEBUG (7): OpenPix - giftbackAppliedValue 
+0
+2022-05-12T14:16:13+00:00 DEBUG (7): OpenPix - Response Charge {"success":true,"additional":{"openpix_correlationid":"b7dae5f8-cbd5-4d0a-abcb-7bbb57fbb807","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/b48ed1c0-834e-425a-b165-4dfe7cf5050e","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/b48ed1c0-834e-425a-b165-4dfe7cf5050e.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=8b7e57088e37475fa60b0b44170da97e5204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905258b7e57088e37475fa60b0b4416304BB4C"}}
+null
+2022-05-12T14:16:13+00:00 DEBUG (7): OpenPix - Response Charge as Additional Information {"openpix_correlationid":"b7dae5f8-cbd5-4d0a-abcb-7bbb57fbb807","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/b48ed1c0-834e-425a-b165-4dfe7cf5050e","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/b48ed1c0-834e-425a-b165-4dfe7cf5050e.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=8b7e57088e37475fa60b0b44170da97e5204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905258b7e57088e37475fa60b0b4416304BB4C"}
+null
+2022-05-12T14:16:13+00:00 DEBUG (7): OpenPix - Order End 
+2022-05-12T14:16:13+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"b7dae5f8-cbd5-4d0a-abcb-7bbb57fbb807","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/b48ed1c0-834e-425a-b165-4dfe7cf5050e","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/b48ed1c0-834e-425a-b165-4dfe7cf5050e.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=8b7e57088e37475fa60b0b44170da97e5204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905258b7e57088e37475fa60b0b4416304BB4C"}
+2022-05-12T14:16:13+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/b48ed1c0-834e-425a-b165-4dfe7cf5050e.png
+2022-05-12T14:16:13+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=8b7e57088e37475fa60b0b44170da97e5204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905258b7e57088e37475fa60b0b4416304BB4C
+2022-05-12T14:16:29+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"b7dae5f8-cbd5-4d0a-abcb-7bbb57fbb807","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/b48ed1c0-834e-425a-b165-4dfe7cf5050e","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/b48ed1c0-834e-425a-b165-4dfe7cf5050e.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=8b7e57088e37475fa60b0b44170da97e5204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905258b7e57088e37475fa60b0b4416304BB4C"}
+2022-05-12T14:16:29+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/b48ed1c0-834e-425a-b165-4dfe7cf5050e.png
+2022-05-12T14:16:29+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=8b7e57088e37475fa60b0b44170da97e5204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905258b7e57088e37475fa60b0b4416304BB4C
+2022-05-12T14:21:09+00:00 DEBUG (7): debug
+{
+    "store_id": null,
+    "customer_payment_id": null,
+    "method": "openpix_pix",
+    "additional_data": null,
+    "additional_information": [],
+    "po_number": null,
+    "cc_type": null,
+    "cc_number_enc": null,
+    "cc_last4": null,
+    "cc_owner": null,
+    "cc_exp_month": 0,
+    "cc_exp_year": 0,
+    "cc_number": null,
+    "cc_cid": null,
+    "cc_ss_issue": null,
+    "cc_ss_start_month": 0,
+    "cc_ss_start_year": 0,
+    "parent_id": 38,
+    "method_instance": {},
+    "created_at": "2022-05-12 14:21:09",
+    "updated_at": "2022-05-12 14:21:09",
+    "entity_id": 38,
+    "amount_ordered": 75,
+    "base_amount_ordered": 75,
+    "shipping_amount": 5,
+    "base_shipping_amount": 5
+}
+2022-05-12T14:21:09+00:00 DEBUG (7): OpenPix New Oder - Order Start 
+2022-05-12T14:21:09+00:00 DEBUG (7): OpenPix New Oder - API Payload {"correlationID":"bc390e14-ef56-4db2-96db-f51cddd908fc","value":7500,"comment":"Default Store View#100000028","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000028"}]}
+2022-05-12T14:21:09+00:00 DEBUG (7): OpenPix New Oder - API Response{"correlationID":"bc390e14-ef56-4db2-96db-f51cddd908fc","value":7500,"comment":"Default Store View#100000028","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000028"}]}
+null
+2022-05-12T14:21:09+00:00 DEBUG (7): OpenPix - giftbackAppliedValue 
+0
+2022-05-12T14:21:09+00:00 DEBUG (7): OpenPix - Response Charge {"success":true,"additional":{"openpix_correlationid":"bc390e14-ef56-4db2-96db-f51cddd908fc","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=e389be7305c04a5d80ae54183c2415d3520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525e389be7305c04a5d80ae541836304507F"}}
+null
+2022-05-12T14:21:09+00:00 DEBUG (7): OpenPix - Response Charge as Additional Information {"openpix_correlationid":"bc390e14-ef56-4db2-96db-f51cddd908fc","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=e389be7305c04a5d80ae54183c2415d3520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525e389be7305c04a5d80ae541836304507F"}
+null
+2022-05-12T14:21:09+00:00 DEBUG (7): OpenPix - Order End 
+2022-05-12T14:21:09+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"bc390e14-ef56-4db2-96db-f51cddd908fc","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=e389be7305c04a5d80ae54183c2415d3520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525e389be7305c04a5d80ae541836304507F"}
+2022-05-12T14:21:09+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/5825ae9a-ef9f-4838-83d0-4df1cb3eb316.png
+2022-05-12T14:21:09+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=e389be7305c04a5d80ae54183c2415d3520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525e389be7305c04a5d80ae541836304507F
+2022-05-12T14:21:20+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"bc390e14-ef56-4db2-96db-f51cddd908fc","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/5825ae9a-ef9f-4838-83d0-4df1cb3eb316.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=e389be7305c04a5d80ae54183c2415d3520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525e389be7305c04a5d80ae541836304507F"}
+2022-05-12T14:21:20+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/5825ae9a-ef9f-4838-83d0-4df1cb3eb316.png
+2022-05-12T14:21:20+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=e389be7305c04a5d80ae54183c2415d3520400005303986540575.005802BR5912Your_Company6009Sao_Paulo62290525e389be7305c04a5d80ae541836304507F
+2022-05-12T14:43:59+00:00 DEBUG (7): debug
+{
+    "store_id": null,
+    "customer_payment_id": null,
+    "method": "openpix_pix",
+    "additional_data": null,
+    "additional_information": [],
+    "po_number": null,
+    "cc_type": null,
+    "cc_number_enc": null,
+    "cc_last4": null,
+    "cc_owner": null,
+    "cc_exp_month": 0,
+    "cc_exp_year": 0,
+    "cc_number": null,
+    "cc_cid": null,
+    "cc_ss_issue": null,
+    "cc_ss_start_month": 0,
+    "cc_ss_start_year": 0,
+    "parent_id": 39,
+    "method_instance": {},
+    "created_at": "2022-05-12 14:43:58",
+    "updated_at": "2022-05-12 14:43:58",
+    "entity_id": 39,
+    "amount_ordered": 150,
+    "base_amount_ordered": 150,
+    "shipping_amount": 10,
+    "base_shipping_amount": 10
+}
+2022-05-12T14:43:59+00:00 DEBUG (7): OpenPix New Oder - Order Start 
+2022-05-12T14:43:59+00:00 DEBUG (7): OpenPix New Oder - API Payload {"correlationID":"ec1214b1-dd27-43dc-930a-22b0e8332037","value":15000,"comment":"Default Store View#100000029","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000029"}]}
+2022-05-12T14:43:59+00:00 DEBUG (7): OpenPix New Oder - API Response{"correlationID":"ec1214b1-dd27-43dc-930a-22b0e8332037","value":15000,"comment":"Default Store View#100000029","customer":{"name":"Eduardo  Maciel","email":"eduardomaciel007@hotmail.com","phone":"5514996933124"},"additionalInfo":[{"key":"Pedido","value":"100000029"}]}
+null
+2022-05-12T14:43:59+00:00 DEBUG (7): OpenPix - giftbackAppliedValue 
+0
+2022-05-12T14:43:59+00:00 DEBUG (7): OpenPix - Response Charge {"success":true,"additional":{"openpix_correlationid":"ec1214b1-dd27-43dc-930a-22b0e8332037","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/22aabb04-cb29-4e66-aa97-ab5aa51a76ce","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/22aabb04-cb29-4e66-aa97-ab5aa51a76ce.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=2419dc6755c4435c8c5f8617144e7a865204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905252419dc6755c4435c8c5f861716304884E"}}
+null
+2022-05-12T14:43:59+00:00 DEBUG (7): OpenPix - Response Charge as Additional Information {"openpix_correlationid":"ec1214b1-dd27-43dc-930a-22b0e8332037","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/22aabb04-cb29-4e66-aa97-ab5aa51a76ce","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/22aabb04-cb29-4e66-aa97-ab5aa51a76ce.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=2419dc6755c4435c8c5f8617144e7a865204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905252419dc6755c4435c8c5f861716304884E"}
+null
+2022-05-12T14:43:59+00:00 DEBUG (7): OpenPix - Order End 
+2022-05-12T14:43:59+00:00 DEBUG (7): Payment Method Block - OpenPix Info - additionalInformation {"openpix_correlationid":"ec1214b1-dd27-43dc-930a-22b0e8332037","openpix_paymentlinkurl":"http:\/\/localhost:8777\/pay\/22aabb04-cb29-4e66-aa97-ab5aa51a76ce","openpix_qrcodeimage":"http:\/\/localhost:5001\/openpix\/charge\/brcode\/image\/22aabb04-cb29-4e66-aa97-ab5aa51a76ce.png","openpix_brcode":"00020101021226990014br.gov.bcb.pix2577localhost:5001\/openpix\/testing?transactionID=2419dc6755c4435c8c5f8617144e7a865204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905252419dc6755c4435c8c5f861716304884E"}
+2022-05-12T14:43:59+00:00 DEBUG (7): Payment Method Block - OpenPix Info - qrCodeImage http://localhost:5001/openpix/charge/brcode/image/22aabb04-cb29-4e66-aa97-ab5aa51a76ce.png
+2022-05-12T14:43:59+00:00 DEBUG (7): Payment Method Block - OpenPix Info - brCode 00020101021226990014br.gov.bcb.pix2577localhost:5001/openpix/testing?transactionID=2419dc6755c4435c8c5f8617144e7a865204000053039865406150.005802BR5912Your_Company6009Sao_Paulo622905252419dc6755c4435c8c5f861716304884E

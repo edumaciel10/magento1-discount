@@ -39,12 +39,12 @@ class OpenPix_Pix_Model_PaymentMethod extends Mage_Payment_Model_Method_Abstract
 
         $payment = $this->getInfoInstance();
 
-        //        $this->stateObject->setState(
-        //            Mage_Sales_Model_Order::STATE_PENDING_PAYMENT
-        //        );
-        //        $this->stateObject->setStatus(
-        //            Mage_Sales_Model_Order::STATE_PENDING_PAYMENT
-        //        );
+        $this->stateObject->setState(
+            Mage_Sales_Model_Order::STATE_PENDING_PAYMENT
+        );
+        $this->stateObject->setStatus(
+            Mage_Sales_Model_Order::STATE_PENDING_PAYMENT
+        );
         //        $this->stateObject->setIsNotified(true);
         $this->debugJson(
             'debug', $payment->getData()
